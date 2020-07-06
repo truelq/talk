@@ -1,25 +1,18 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+//https://reactrouter.com/web/api route
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
+import {Loginpage} from './login/index';
+import futurepage from './future/index';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Route exact path="/" component={Loginpage} />
+        <Route path="/future" component={futurepage} />
+    </Router>
   );
 }
 
