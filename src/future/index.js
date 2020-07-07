@@ -1,6 +1,5 @@
 import React from 'react';
 
-function futurepage() {
+export const Futurepage=()=> {
     return <h2> future</h2>;
 };
-export default futurepage;
